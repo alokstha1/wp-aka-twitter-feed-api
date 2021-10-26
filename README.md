@@ -7,3 +7,12 @@
 The shortcode <strong>[watfa_twitter_feeds]</strong> can be added to a page and the feeds will be displayed in the frontend.
 
 We can setup a widget too and add it to a sidebar also.
+
+
+**Technologies Used**
+- WordPress
+- PHP
+- Twitter Oauth PHP Library
+- CSS
+- jQuery
+- HTML
