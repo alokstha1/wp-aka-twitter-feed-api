@@ -1,0 +1,66 @@
+/**
+* Plugin css file
+**/
+ul.atf-tweets{
+    border: none;
+    margin: 0 !important;
+    outline: medium none;
+    padding: 0;
+    position: relative;
+    width: 100%;
+}
+
+ul.atf-tweets a{
+    box-shadow: none !important;
+    text-decoration: none;
+}
+
+ul.atf-tweets li.tweet-item {
+    border-color: rgb(238, 238, 238) rgb(221, 221, 221) rgb(187, 187, 187);
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.14902) 0px 1px 3px;
+    font-size: 14px;
+    line-height: 18px;
+    list-style-type: none;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 52px !important;
+    position: relative;
+    word-break: break-word;
+}
+
+.twitter-avatar {
+    border-radius: 100%;
+    margin-right: 0;
+    width: 35px;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    overflow: hidden;
+}
+
+.twitter-username .screen-name {
+    display: block;
+    font-weight: 600;
+}
+
+.twitter-username a {
+    box-shadow: none !important;
+    display: block;
+    font-size: 12px;
+    opacity: 0.7;
+    text-decoration: none !important;
+}
+
+.tweet-data{
+    margin-top: 7px;
+}
+
+.tweet-data a{
+    color: #3b94d9;
+}
+
+.tweet-data a+a{
+    margin-left: 3px;
+}
