@@ -32,7 +32,7 @@ $watfa_twitter_feeds_options = get_option( 'watfa_twitter_feeds_options' );
 								</label>
 							</th>
 							<td>
-								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[widget_enable]" id="atf-widget-flag" value="1" <?php checked( $watfa_twitter_feeds_options['widget_enable'], true ); ?> />
+								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[widget_enable]" id="atf-widget-flag" value="1" <?php ( isset( $watfa_twitter_feeds_options['widget_enable'] ) && ! empty( $watfa_twitter_feeds_options['widget_enable'] ) ) ? checked( $watfa_twitter_feeds_options['widget_enable'], true ) : ''; ?> />
 							</td>
 						</tr>
 
@@ -106,7 +106,7 @@ $watfa_twitter_feeds_options = get_option( 'watfa_twitter_feeds_options' );
 								</label>
 							</th>
 							<td>
-								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[title_enable]" id="atf-title-flag" value="1" <?php checked( $watfa_twitter_feeds_options['title_enable'], true ); ?> />
+								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[title_enable]" id="atf-title-flag" value="1" <?php ( isset( $watfa_twitter_feeds_options['title_enable'] ) && ! empty( $watfa_twitter_feeds_options['title_enable'] ) ) ? checked( $watfa_twitter_feeds_options['title_enable'], true ) : ''; ?> />
 							</td>
 						</tr>
 
@@ -161,7 +161,7 @@ $watfa_twitter_feeds_options = get_option( 'watfa_twitter_feeds_options' );
 								</label>
 							</th>
 							<td>
-								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[url_enable]" id="atf-url-flag" value="1" <?php checked( $watfa_twitter_feeds_options['url_enable'], true ); ?> />
+								<input class="regular-text" type="checkbox" name="watfa_twitter_feeds_options[url_enable]" id="atf-url-flag" value="1" <?php ( isset( $watfa_twitter_feeds_options['url_enable'] ) && ! empty( $watfa_twitter_feeds_options['url_enable'] ) ) ? checked( $watfa_twitter_feeds_options['url_enable'], true ) : ''; ?> />
 							</td>
 						</tr>
 					</tbody>
