@@ -14,9 +14,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// Define ATF_PLUGIN_FILE.
-if ( ! defined( 'ATF_PLUGIN_FILE' ) ) {
-	define( 'ATF_PLUGIN_FILE', __FILE__ );
+// Define ATF_PLUGIN_DIR
+if ( ! defined( 'ATF_PLUGIN_DIR' ) ) {
+	define( 'ATF_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 }
 
 // Define ATF_PLUGIN_URL.
@@ -26,10 +26,10 @@ if ( ! defined( 'ATF_PLUGIN_URL' ) ) {
 
 // Include the main Aka_Twitter_Feeds class page.
 if ( ! class_exists( 'Aka_Twitter_Feeds' ) ) {
-	include_once dirname( __FILE__ ) . '/includes/class-aka-twitter-feeds.php';
+	include_once ATF_PLUGIN_DIR . '/includes/class-aka-twitter-feeds.php';
 }
 
 // Include the main Aka_Twitter_Feeds_Widget widget class page.
 if ( ! class_exists( 'Aka_Twitter_Feeds_Widget' ) ) {
-	include_once dirname( __FILE__ ) . '/includes/class-aka-twitter-feeds-widget.php';
+	include_once ATF_PLUGIN_DIR . '/includes/class-aka-twitter-feeds-widget.php';
 }
