@@ -10,12 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /**
 * Initialize Wp_Aka_Twitter_Feeds class
-**/
+*/
 class Wp_Aka_Twitter_Feeds {
 
 	/**
 	* Class constructor
-	**/
+	*/
 	function __construct() {
 
 		//add menu options
@@ -43,7 +43,7 @@ class Wp_Aka_Twitter_Feeds {
 
 	/**
 	* Add menu page to the dashboard menu.
-	**/
+	*/
 	public function watfa_register_menu_page() {
 		add_menu_page( __( 'Twitter Feeds', 'watfa' ), __( 'Twitter Feeds', 'watfa' ), 'manage_options', 'twitter-feeds.php', array( $this, 'atf_add_setting_page' ), '', 20 );
 
@@ -51,17 +51,17 @@ class Wp_Aka_Twitter_Feeds {
 
 	/**
 	* Callback function of add_menu_page. Displays the page's content.
-	**/
+	*/
 	public function atf_add_setting_page() {
 
 		//included the plugin option settings html
-		include( dirname( ATF_PLUGIN_FILE ) . '/includes/twitter-feeds-settings.php' );
+		include_once ATF_PLUGIN_DIR . '/includes/twitter-feeds-settings.php';
 
 	}
 
 	/**
 	* Registers a text field setting save to options table.
-	**/
+	*/
 	public function watfa_register_settings() {
 		register_setting( 'watfa_twitter_feeds_options', 'watfa_twitter_feeds_options', array( $this, 'atf_sanitize_settings' ) );
 	}
@@ -134,7 +134,7 @@ class Wp_Aka_Twitter_Feeds {
 	**/
 	public function watfa_twitter_feeds_shortcode( $atts ) {
 
-		require_once( dirname( ATF_PLUGIN_FILE ) . '/twitteroauth/twitteroauth.php' );
+		require_once( ATF_PLUGIN_DIR . '/twitteroauth/twitteroauth.php' );
 
 		$watfa_twitter_feeds_options = get_option( 'watfa_twitter_feeds_options' );
 
