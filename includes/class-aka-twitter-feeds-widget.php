@@ -42,7 +42,7 @@ class Wp_Aka_Twitter_Feeds_Widget extends WP_Widget {
 				echo $args['before_title'] . $instance['title'] . $args['after_title'];
 
 			}
-			require_once( dirname( ATF_PLUGIN_FILE ) . '/twitteroauth/twitteroauth.php' );
+			require_once( ATF_PLUGIN_DIR . '/twitteroauth/twitteroauth.php' );
 
 			$consumer_key          = trim( $watfa_twitter_feeds_options['consumer_key'] );
 			$consumer_secret       = trim( $watfa_twitter_feeds_options['consumer_secret'] );
@@ -50,8 +50,8 @@ class Wp_Aka_Twitter_Feeds_Widget extends WP_Widget {
 			$access_token_secret   = trim( $watfa_twitter_feeds_options['access_token_secret'] );
 			$tweets_count = ( isset( $instance['tweets_count'] ) && ! empty( $instance['tweets_count'] ) ) ? intval( $instance['tweets_count'] ) : 5;
 			$username              = $watfa_twitter_feeds_options['username'];
-			$background_color      = esc_attr( $instance['widget_background_color'] );
-			$text_color            = esc_attr( $instance['widget_text_color'] );
+			$background_color      = ( isset( $instance['widget_background_color']) && ! empty( $instance['widget_background_color'] ) ) ? esc_attr( $instance['widget_background_color'] ) : '';
+			$text_color            = ( isset( $instance['widget_text_color']) && ! empty( $instance['widget_text_color'] ) ) ? esc_attr( $instance['widget_text_color'] ) : '';
 
 			$api_call       = new viwptf_TwitterOAuth(
 				$consumer_key,
